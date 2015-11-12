@@ -5,18 +5,6 @@
 # Date        - 2/2/2012
 #
 
-#
-# SET THESE VARIABLES
-#
-
-# Your username
-USERNAME="YOUR_USERNAME"
-
-# Your password. We suggest you use a SSH key as it is more secure. See the
-# README.txt for more information. Comment this line (or set blank) to
-# disable the password and use your SSH key instead.
-PASSWORD="YOUR_PASSWORD"
-
 # File is the CSV you want to upload. Default is that it's provided on the
 # command-line when calling the script (i.e. sendcsv.sh MyFile.csv)
 FILE="$1"
@@ -49,7 +37,7 @@ fi
 #
 if [ "$PASSWORD" ]; then
 	# Use password for authentication
-	
+
 	# The 'expect' binary is required. This will allow us to send commands
 	# directly to the scp executable, so we can type the password automatically.
 	EXPECT=`which expect`
@@ -57,12 +45,12 @@ if [ "$PASSWORD" ]; then
 		echo "expect executable not found (ensure it is installed and in your PATH)."
 		exit 1
 	fi
-	
+
 	$EXPECT -c "
             # exp_internal 1 # uncomment for debugging
             spawn $SCP "$FILE" $USERNAME@$HOST:uploaded/
-            expect { 
-              "*password:*" { send $PASSWORD\r\n; interact } 
+            expect {
+              "*password:*" { send $PASSWORD\r\n; interact }
               eof { exit }
             }
             exit
