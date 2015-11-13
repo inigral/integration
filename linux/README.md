@@ -13,9 +13,9 @@ Example, from terminal:
 ./send_csv.sh myfile.csv
 ```
 
-Note:  The file path is relative to the script's location, so if you had a
- file called myfile.csv in the same directory, then it would work as is.
- If the file is located somewhere else on your computer, make sure to use its full path:
+Note: The file path is relative to the script's location, so if you had a
+file called myfile.csv in the same directory, then it would work as is.
+If the file is located somewhere else on your computer, make sure to use its full path:
  ```
  ./send_csv.sh /path/to/myfile.csv
 ```
