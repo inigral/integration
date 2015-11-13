@@ -8,9 +8,9 @@ You only need to set a few variables in the script for it to function. Then
 you can run the script manually or schedule it to be run via the Control
 Panel's Scheduled Tasks panel.
 
-First open sendcsv.bat with Notepad
+First open sendcsv.bat with your text editor
 
-You should find a line to set your username:
+Find the line to set your username:
  ```
  SET USERNAME="YOUR USERNAME"
  ```
@@ -20,7 +20,7 @@ e.g.
 SET USERNAME="abu"
 ```
 
-Next you should find a line to set your password:
+Next find the line to set your password:
 ```
 SET PASSWORD="YOUR PASSWORD"
 ```
